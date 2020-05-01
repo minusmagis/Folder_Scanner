@@ -73,7 +73,7 @@ for superindex,extension in enumerate(File_extension_list):
             elapsed_time = time.time() - start_time
             local_completion_percentage = ((1 + index) / len(Full_path_file_list)) * 100
             estimated_time = estimated_time * (0.7) + (elapsed_time / (local_completion_percentage / 100)) * (0.3)
-            if index % 10 == 0:
+            if index % 100 == 0:
                 print(
                     str(local_completion_percentage) + '% ' + str(len(File_extension_list)) + ' Elapsed time = ' + str(round(elapsed_time, 2)) + ' s   Estimated Time = ' + str(round(estimated_time * len(File_extension_list), 2)) + '     ' + str(Corrupted_files) + ' Corrupted files of which ' + str(
                         Moved_files) + '  moved succesfully from ' + str(Files_with_extension) + ' Extension Files from a total of ' + str(len(Full_path_file_list))+ ' Semicorrupted images = '+str(Semi_corrupted_images))
